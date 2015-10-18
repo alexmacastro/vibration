@@ -5,11 +5,12 @@ void setup() {
 
 void loop() {
   int valVib = analogRead(0);
-  float mV = (valVib / 1024.0) * 3300;
-  float vib = (mV - 1500)  / 300;
+  float vib=valVib;
+  //float mV = (valVib / 1024.0) * 3300;
+  //float vib = (mV - 1500)  / 300;
 
   Serial.print(vib);
   Serial.print("\n");
 
-  delay(1);
+  delay(10);
 }
